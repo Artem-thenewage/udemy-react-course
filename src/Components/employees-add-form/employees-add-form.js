@@ -24,6 +24,7 @@ class EmployeesAddForm extends Component {
 
     render() {
         const {name, salary} = this.state
+
         return (
             <div className="app-add-form">
                 <h3>Добавьте нового сотрудника</h3>
@@ -43,7 +44,7 @@ class EmployeesAddForm extends Component {
                         name="salary"
                         value={salary}/>
     
-                    <button type="submit"
+                    <button type="submit" disabled = {name ==='' || salary === ''}
                             className="btn btn-outline-light">Добавить</button>
                 </form>
             </div>
